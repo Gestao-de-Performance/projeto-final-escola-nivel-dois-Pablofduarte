@@ -1,0 +1,648 @@
+/*----------------INÍCIO GERAL------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+/*-----------INÍCIO CORES----------*/
+
+:root {
+    /* ------COLORS NAV LIST-------*/
+    --color-text-nav: #000;
+    --color-btn-hamburguer: #000;
+
+
+   /* ------ CORES SECTION SOBRE  ------*/
+    --color-text-sobre: #ffffff;
+
+    /*-------- CORES SECTION PROJETOS --------*/
+    --color-titulo-btn-projetos: #FFD43B;
+
+
+    
+
+}
+
+/*----------- FIM CORES ----------*/
+
+/*INICIO BODY*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+a, 
+.btn {
+    transition: all 300ms ease;
+
+/*FIM BODY*/
+}
+
+/*-----------FIM GERAL--------------------*/
+
+/*--------INICIO HEADER*-----------*/
+
+header {
+    background: linear-gradient(to bottom right, #CBD5E1, #92A4B5, #334155);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 17vh;
+
+}
+ 
+
+#menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    font-size: 1.3rem;
+    
+}
+
+.ElementosNav {
+    display: flex;
+    gap: 1rem;
+    
+}
+
+ 
+a, #menu {
+
+    color: var(--color-text-nav);
+    text-decoration: none;
+    text-decoration-color: var(--color-text-nav);
+}
+/*-------- EFEITO COM HOVER ---------*/
+li:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.logo img {
+    height: 100%;       
+    max-height: 17vh;   /* PARA QUE NÃO ULTRAPASSE A ALTURA DO HEADER */
+    width: auto; 
+}
+
+   
+  /*------ MUDANÇA DE ESCALA LOGO -------*/
+.logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+#btn-mobile {
+  display: none;
+  color: #ffffff;
+}
+
+/*--------- RESPONSIVIDADE HEADER --------*/
+
+
+@media (max-width: 767px) {
+  .ElementosNav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 140px;
+    right: 0;
+    background:#2C3E50;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+    flex-direction: column;
+  }
+
+  #nav.active #menu {
+    height: calc(40vh - 80px);
+    visibility: visible;
+    overflow-y: auto;
+    display: flex;
+  }
+
+  #menu a {
+    display: block;
+    padding: 0.2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.250);
+    color: #ffffff;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5 1rem;
+    font-size: 0.85rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.7rem;
+    align-items: center;
+    color: var(--color-btn-hamburguer)
+  }
+
+/* Botão span Hamburguer*/
+
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+    color: var(--color-btn-hamburguer)
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+    
+        
+/*----------FIM HEADER*------------*/
+
+
+/*------ INÍCIO PRINCIPAL ------*/
+
+.SetionColunaPrincipal {
+    min-height: fit-content;
+    background-image: url("img/FundoPrincipal.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+#profile {
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+    
+    
+}
+
+
+/*------ AVATAR PRINCIPAL ------*/
+.sectionImgContainer img {
+    width: 300px; 
+    height: auto;
+    margin: auto 0;
+    box-shadow: rgba(0, 0, 0, 0.411) 0px 40px 20px -20px;
+
+        
+}
+
+
+.section_text {
+    text-align: center;
+    
+   
+
+}
+
+.TextoPrincipalOla {
+    font-size: 1.5rem;
+    color: #0F172A;
+    position: relative;
+    top: 5px
+    
+    
+}
+
+
+ h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #0F172A;
+}
+
+.TextoPrincipalExp{
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -12px;
+    color: #2563EB;
+
+}
+
+.TextoPrincipalDescrubra {
+    text-align: center;
+    margin-top: 10px;
+    color: #334155;
+    
+}
+
+
+ /*------- SETA BAIXO PRINCIPAL -------*/
+ .SetaBaixo{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 10px;
+   animation: anima 1500ms ease infinite;
+ }
+
+ /*Animação SETA*/
+ @keyframes anima {
+    to {
+        opacity: 0.1;
+        transform: scale(0.85) translateY(20px);
+    }
+}
+
+/*Responsividade Section Principal*/
+
+@media (max-width: 767px){
+     #profile{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+  
+    .imgPrincipal {
+     width: 180px;
+     max-width: 250px;
+     height: auto;
+     
+     
+    }
+
+    .TextoPrincipalOla {
+        display: none;
+    }
+
+    .TextoPrincipalDescrubra {
+        display: none;
+    }
+      
+   
+    
+}
+
+    
+
+/*------- INÍCIO SOBRE MIM -----------*/
+
+.SectionSobre {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 4rem; 
+   
+
+    
+}
+
+.TituloIntroSobre {
+    color: var(--color-text-sobre);
+    font-size: 3rem;
+    line-height: 1.3em;
+    font-weight: 700;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.514);
+    
+
+}
+
+
+.AvatarSobre {
+    width: 350px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.322) 0px 30px 20px -20px;
+    
+    
+}
+
+.TextExperiencia{
+    color:var(--color-text-sobre);
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.600);
+}
+
+.ContainerSobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+/*------ RESPONSIVIDADE IMG SOBRE ------*/
+@media (max-width: 767px){
+    .ContainerSobre{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .AvatarSobre{
+        width: 300px;
+        height: auto;
+    }
+}
+
+/*------- FIM SOBRE MIM -----------*/
+
+/*------------- INÍCIO EXPÊRIENCIA ------------*/
+
+.container-experiencia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #89a6be;
+    
+}
+
+
+.card-list {
+    list-style-type: none;
+
+}
+
+.card-list .card-item .card-link {
+    width: 350px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: auto;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+    
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #5372f0;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16 /9;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+
+.card-list .card-link .badge {
+    color: #1e293b;
+    padding: 6px 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #dde4ff;
+    width: fit-content;
+    border-radius: 50px;
+
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #334155;
+    font-weight: 600;
+    line-height: 1.4;
+    
+
+}
+
+.card-list .card-link .card-button {
+    height: 40px;
+    width: 40px;
+    color: #2563EB;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    border: 2px solid #2563eb;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    transition: 0.4 ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #1d4ed8;
+}
+
+@media (max-width: 400px){
+    .card-list .card-item .card-link {
+        width: 280px;
+
+    }
+}
+
+
+/*------------- FIM EXPÊRIENCIA -----------*/
+
+
+
+
+
+
+
+
+
+
+/*------ INICÍO PROJETOS -----*/
+
+.SectionProjetos {
+    margin: auto;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Quebrar elementos em modo mobile */
+    gap: 20px;
+}
+
+.CardTitulo {
+    color: #FFD43B;
+
+}
+    
+
+/*Card Responsivo*/
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 220px;
+    padding: 30px;
+    background-color: #00000039;
+    box-shadow: 10px 10px 10px #000000a8;
+    border-radius: 8px;
+    
+
+}
+
+
+
+.img img {
+    max-height: 200x;
+    max-width: 200px;
+    object-fit: contain;
+    
+}
+
+.CardTitulo {
+    min-height: 40px; /* espaço fixo para o título */
+    display: flex;
+    align-items: flex-end; /* texto encostado embaixo */
+    color: var(--color-titulo-btn-projetos);
+    margin-bottom: 10px;
+
+}
+
+.read_button {
+    background-color: var(--color-titulo-btn-projetos);
+    border: none;
+    font-size: 1rem;
+    padding: 5px;
+    font-weight: bold;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: all 0.2s ease-in-out;
+    
+    
+    
+}
+.read_button:hover {
+    background-color: transparent;
+    color: #FFD43B;
+    transition: all 0.2s ease-in-out;
+
+}
+
+
+.CardTexto {
+    height: 170px; /* Altura do texto que sera aprensentada*/
+    overflow: hidden; /* evitar vazamento do texto fora do Card*/
+   
+    
+}
+
+.card.active .CardTexto  {
+    height: auto;
+}
+
+
+
+/*------ FIM PROJETOS -----*/
+
+/*------- *INICÍO RODAPÉ ------*/
+
+footer {
+    
+    align-items: center;
+    background: linear-gradient(to bottom right, #CBD5E1, #92A4B5, #334155);
+
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+  }
+
+  .LogoJPF-Footer {
+    width: 130px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}   
+
+.FooterIcons {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+.FooterIcons img{
+    width: 50px;
+}
+
+.TextoFooter a{
+    font-size: 1rem;
+}
+
+.TextoFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+    gap:8px;
+
+}
+
+.texto  {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    
+    
+}
+
+.FooterIcons img {
+    transition: transform 0.3s ease-in-out;
+}
+  
+  .FooterIcons img:hover {
+    transform: scale(1.2);
+}
+
+
+/*------- *FIM RODAPÉ ------*/
+
+
